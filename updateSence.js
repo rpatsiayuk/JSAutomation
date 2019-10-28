@@ -18,4 +18,3 @@ function updateSence(text, numberOfChar, charForReplace) {
 
 updateSence("When love kills love", 2, "Hello")
 updateSence(55, 2, "Hello")
-//updateSence("I am Software", 2, "Hello")
