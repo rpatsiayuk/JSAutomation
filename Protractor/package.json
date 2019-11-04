@@ -1,0 +1,25 @@
+{
+  "name": "protractor-demo",
+  "version": "1.0.0",
+  "description": "protractor demo test",
+  "main": "index.js",
+  "keywords": [
+    "protractor",
+    "page object pattern",
+    "testing",
+    "end to end testing"
+  ],
+  "scripts": {
+    "setup": "npm install && webdriver-manager update",
+    "start": "webdriver-manager start",
+    "test": "protractor config.js"
+  },
+  "author": "Raman Patsiayuk",
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine": "^3.5.0",
+    "protractor": "^5.4.2",
+    "protractor-jasmine2-html-reporter": "0.0.7"
+  },
+  "dependencies": {}
+}
