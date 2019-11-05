@@ -27,9 +27,9 @@ exports.config = {
       }],*/
     capabilities: {
         browserName: 'chrome',
-        //shardTestFiles: true,
-        //maxInstances: 2,
-        //count:2
+        shardTestFiles: true,
+        maxInstances: 2,
+        count:2
     },
     // Options to be passed to Jasmine.
     jasmineNodeOpts: {
