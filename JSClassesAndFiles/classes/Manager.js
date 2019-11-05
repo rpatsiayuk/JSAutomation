@@ -1,3 +1,4 @@
+let Person = require('./Person')
 class Manager extends Person {
 
     constructor(firstName, lastName, department, countOfPeople) {
@@ -10,3 +11,5 @@ class Manager extends Person {
         console.log("Hello. I'm a manager, my department is ${this.department} and count of people ${this.countOfPeople}")
     }
 }
+
+module.exports = Manager;

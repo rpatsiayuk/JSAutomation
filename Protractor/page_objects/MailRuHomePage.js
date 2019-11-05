@@ -6,8 +6,9 @@ const RegistrationAccountPage = require('./RegistrationAccountPage')
 class MailRuHomePage extends BasePage {
 
     constructor() {
+        super();
         this.LoginToEmailForm = new LoginToEmailForm();
-        this.registrationLink = element(by.id("#PH_regLink"));
+        this.registrationLink = element(by.id("PH_regLink"));
     }
 
     clickRegistrationLink() {
