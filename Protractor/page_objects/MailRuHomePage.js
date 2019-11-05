@@ -8,11 +8,11 @@ class MailRuHomePage extends BasePage {
     constructor() {
         super();
         this.LoginToEmailForm = new LoginToEmailForm();
-        this.registrationLink = element(by.id("PH_regLink"));
+        this.registrationLink = $("#PH_regLink");
     }
 
-    clickRegistrationLink() {
-        this.registrationLink.click();
+    async clickRegistrationLink() {
+        await this.registrationLink.click();
         return new RegistrationAccountPage();
     }
 

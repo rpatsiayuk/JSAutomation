@@ -1,8 +1,7 @@
 const MailRuHomePage = require('../page_objects/MailRuHomePage');
-const EC = protractor.ExpectedConditions;
+//const EC = protractor.ExpectedConditions;
 
 describe('Mail.ru home page', ()=> {
-    const mailRuHomePage = require('../page_objects/MailRuHomePage');
     beforeEach(async () => {
         await browser.manage().deleteAllCookies();
         await browser.get(browser.baseUrl);
@@ -18,7 +17,7 @@ describe('Mail.ru home page', ()=> {
         const mailRuHomePage = new MailRuHomePage();
         const registrationAccountPage = await mailRuHomePage.clickRegistrationLink();
         let title = await registrationAccountPage.getPageTitle();
-        expect(title).toEqual("Регистрая");
+        expect(title).toEqual("Регистрация");
         done();
     })
 
