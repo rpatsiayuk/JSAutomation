@@ -10,7 +10,7 @@ class Person {
     }
 
     helloPerson() {
-        console.log("Hello. I'm a person and my full name is ${this.fullName}");
+        console.log("Hello. I'm a person and my full name is " + this.fullName);
     };
 }
 
