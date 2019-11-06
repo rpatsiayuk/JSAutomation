@@ -17,7 +17,7 @@ describe('Mail.ru home page', ()=> {
 
     it('should have registration title', async (done) => {
         const registrationAccountPage = await mailRuHomePage.clickRegistrationLink();
-        let title = await registrationAccountPage.getPageTitle();
+        const title = await registrationAccountPage.getPageTitle();
         expect(title).toEqual("Регистрация");
         done();
     })
