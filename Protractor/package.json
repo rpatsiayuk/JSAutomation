@@ -17,6 +17,7 @@
   "author": "Raman Patsiayuk",
   "license": "ISC",
   "devDependencies": {
+    "@hetznercloud/protractor-test-helper": "^1.1.0",
     "jasmine": "^3.5.0",
     "protractor": "^5.4.2",
     "protractor-jasmine2-html-reporter": "0.0.7"

@@ -46,5 +46,6 @@ exports.config = {
         browser.driver.manage().window().setSize(1600, 800)
         jasmine.getEnv().addReporter(reporter);
         browser.waitForAngularEnabled(false); //turn off validation in AngularJS
+        require('@hetznercloud/protractor-test-helper/').installMatcher();
     }
 }

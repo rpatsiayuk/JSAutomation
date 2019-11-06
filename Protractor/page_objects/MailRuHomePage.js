@@ -11,6 +11,10 @@ class MailRuHomePage extends BasePage {
         this.registrationLink = $("#PH_regLink");
     }
 
+    async openMailRu() {
+        await browser.get(browser.baseUrl);
+    }
+
     async clickRegistrationLink() {
         await this.registrationLink.click();
         return new RegistrationAccountPage();
