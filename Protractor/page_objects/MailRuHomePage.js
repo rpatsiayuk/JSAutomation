@@ -3,7 +3,6 @@ const BasePage = require('./BasePage');
 const LoginToEmailForm = require('../elements/LoginToEmailForm');
 const EmailPage = require('./EmailPage');
 const RegistrationAccountPage = require('./RegistrationAccountPage');
-const Logger = require("js-logger");
 class MailRuHomePage extends BasePage {
     
     constructor() {
@@ -13,6 +12,7 @@ class MailRuHomePage extends BasePage {
     }
 
     async openMailRu() {
+        await browser.manage().deleteAllCookies();
         await browser.get(browser.baseUrl);
     }
 
@@ -22,7 +22,6 @@ class MailRuHomePage extends BasePage {
     }
 
     async clickRegistrationLink() {
-        Logger.info("Click on " + this.registrationLink)
         await this.registrationLink.click();
         return new RegistrationAccountPage();
     }

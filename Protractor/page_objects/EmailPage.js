@@ -2,6 +2,7 @@
 const BasePage = require('./BasePage');
 
 class EmailPage extends BasePage {
+    
     constructor() {
         super();
     }

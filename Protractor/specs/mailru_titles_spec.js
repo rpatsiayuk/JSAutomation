@@ -4,9 +4,9 @@ const MailRuHomePage = require('../page_objects/MailRuHomePage');
 describe('Mail.ru home page', ()=> {
     const mailRuHomePage = new MailRuHomePage();
     
-    beforeEach(async () => {
-        await browser.manage().deleteAllCookies();
-        mailRuHomePage.openMailRu();
+    beforeEach(async (done) => {
+        await mailRuHomePage.openMailRu();
+        done();
     });
 
     it('should have url is ${browser.baseUrl}', async (done) =>  {

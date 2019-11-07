@@ -43,7 +43,16 @@ exports.config = {
     getPageTimeout: timeout,
 
     onPrepare: function () {
-        browser.driver.manage().window().setSize(1600, 800);
+        //browser.driver.manage().window().setSize(1600, 800);
+        /*browser.driver.executeScript(function() {
+            return {
+                width: window.screen.availWidth,
+                height: window.screen.availHeight
+            };
+        }).then(function(result) {
+            browser.driver.manage().window().setSize(result.width, result.height);
+        });*/
+        browser.driver.manage().window().maximize();
         jasmine.getEnv().addReporter(reporter);
         browser.waitForAngularEnabled(false); //turn off validation in AngularJS
         require('@hetznercloud/protractor-test-helper/').installMatcher();
