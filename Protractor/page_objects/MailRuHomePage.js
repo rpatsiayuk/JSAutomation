@@ -3,8 +3,9 @@ const BasePage = require('./BasePage');
 const LoginToEmailForm = require('../elements/LoginToEmailForm');
 const EmailPage = require('./EmailPage');
 const RegistrationAccountPage = require('./RegistrationAccountPage');
+const Logger = require('../logger/Logger')
 class MailRuHomePage extends BasePage {
-    
+
     constructor() {
         super();
         this.LoginToEmailForm = new LoginToEmailForm();
@@ -13,6 +14,7 @@ class MailRuHomePage extends BasePage {
 
     async openMailRu() {
         await browser.manage().deleteAllCookies();
+        Logger.info("Open url " + browser.baseUrl);
         await browser.get(browser.baseUrl);
     }
 

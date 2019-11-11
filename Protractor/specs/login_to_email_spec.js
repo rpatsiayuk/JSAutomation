@@ -11,7 +11,7 @@ describe('Login to email page', () => {
 
     it('should have title', async () => {
         const emailPage = await mailRuHomePage.loginToEmail("test_user2017", "@mail.ru", "Password123");
-        await browser.wait(EC.titleIs("Входящие - Почта Mail.ru"), 5000);
+        await browser.wait(EC.titleIs("Входящие - Почта Mail.ru"), 10000);
         let title = await emailPage.getPageTitle();
         expect(title).toContain("Входящие - Почта Mail.ru");
     });

@@ -1,5 +1,5 @@
 const { selectOptionByText, sendKeys } = require('@hetznercloud/protractor-test-helper');
-//import {selectOptionByText} from '@hetznercloud/protractor-test-helper';
+const Logger = require('../logger/Logger')
 class LoginToEmailForm {
 
     constructor() {
@@ -11,6 +11,7 @@ class LoginToEmailForm {
     };
 
     async enterEmail(email) {
+        Logger.info("Enter " + email + " in login email form");
         await this.email.click().sendKeys(email);
     }
 
