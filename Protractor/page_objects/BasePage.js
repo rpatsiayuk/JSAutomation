@@ -1,11 +1,10 @@
-"use strict";
+'use strict'
 class BasePage {
-    constructor() {
-    }
+  constructor () {}
 
-    getPageTitle() {
-        return browser.getTitle();
-    }
-
+  getPageTitle () {
+    return browser.getTitle()
+  }
 }
-module.exports = BasePage;
+
+module.exports = BasePage
