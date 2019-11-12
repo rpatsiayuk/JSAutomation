@@ -34,7 +34,7 @@ exports.config = {
     // Options to be passed to Jasmine.
     jasmineNodeOpts: {
         showColors: true,   // Use colors in the command line report.  
-        defaultTimeoutInterval: 350000,  // Time to wait in ms before a test fails. Default value = 30000
+        defaultTimeoutInterval: 35000,  // Time to wait in ms before a test fails. Default value = 30000
         isVerbose: true,
         includeStackTrace: true
     },
