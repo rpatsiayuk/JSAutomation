@@ -1,4 +1,7 @@
-const { selectOptionByText, sendKeys } = require('@hetznercloud/protractor-test-helper');
+const {
+    selectOptionByText,
+    sendKeys
+} = require('@hetznercloud/protractor-test-helper');
 const Logger = require('../logger/Logger')
 class LoginToEmailForm {
 
@@ -11,22 +14,33 @@ class LoginToEmailForm {
     };
 
     async enterEmail(email) {
-        Logger.info("Enter " + email + " in login email form");
+        Logger.info("Enter " + email + " in login email field");
         await this.email.click().sendKeys(email);
     }
 
     async selectDomain(domain) {
         await this.domain.click();
+        Logger.info("Select " + domain + " from domain drop down");
         await selectOptionByText(this.domain, domain);
+    }
+
+    async enterPassword(password) {
+        Logger.info("Enter " + password + " in password field");
+        await sendKeys(this.password, password);
+    }
+
+    async clickSubmitButton() {
+        Logger.info("Click on submit button");
+        await this.submitButton.click();
     }
 
     async loginToEmail(email, domain, password) {
         await this.enterEmail(email);
         await this.selectDomain(domain);
         await this.rememberCheckBox.click();
-        await this.submitButton.click();
-        await sendKeys(this.password, password);
-        await this.submitButton.click();
+        await this.clickSubmitButton();
+        await this.enterPassword(password);
+        await this.clickSubmitButton();
     }
 }
 
