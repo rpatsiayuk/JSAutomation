@@ -4,21 +4,18 @@ const MailRuHomePage = require('../page_objects/MailRuHomePage')
 describe('Mail.ru home page', () => {
   const mailRuHomePage = new MailRuHomePage()
 
-  beforeEach(async done => {
+  beforeEach(async () => {
     await mailRuHomePage.openMailRu()
-    done()
   })
 
-  it('should have url is ${browser.baseUrl}', async done => {
-    const url = await browser.getCurrentUrl()
-    expect(url).toEqual(browser.baseUrl)
-    done()
+  it('should have url is ${browser.baseUrl}', async () => {
+    const url = await browser.getCurrentUrl();
+    expect(url).toEqual(browser.baseUrl);
   })
 
-  it('should have registration title', async done => {
-    const registrationAccountPage = await mailRuHomePage.clickRegistrationLink()
-    const title = await registrationAccountPage.getPageTitle()
-    expect(title).toEqual('Регистрация')
-    done()
+  it('should have registration title', async () => {
+    const registrationAccountPage = await mailRuHomePage.clickRegistrationLink();
+    const title = await registrationAccountPage.getPageTitle();
+    expect(title).toEqual('Регистрация');
   })
 })

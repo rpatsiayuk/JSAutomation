@@ -1,8 +1,8 @@
+const _ = require('lodash');
+
 class User {
-  constructor (email, domain, password) {
-    this.email = email
-    this.domain = domain
-    this.password = password
+  constructor (data) {
+    _.assign(this, _.pick(data, ['email', 'domain', 'password']));
   }
 
   get email () {

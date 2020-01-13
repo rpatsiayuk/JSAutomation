@@ -4,9 +4,8 @@ const EC = protractor.ExpectedConditions
 describe('Login to email page', () => {
   const mailRuHomePage = new MailRuHomePage()
 
-  beforeEach(async done => {
-    await mailRuHomePage.openMailRu()
-    done()
+  beforeEach(async () => {
+    await mailRuHomePage.openMailRu();
   })
 
   it('should have title', async () => {
